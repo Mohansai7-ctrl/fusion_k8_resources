@@ -3,8 +3,8 @@ kind: Pod
 metadata:
   name: nginx
   # if you want to create the pod in particular namespace:
-  # lables:
-  #   namespace: expense
+  lables:
+    namespace: fusion
 spec:
   containers:
   # docker run -d --name nginx nginx:stable-perl ----> it will pull nginx:stable-perl base image from docker hub and creates container of name nginx and then start the container
