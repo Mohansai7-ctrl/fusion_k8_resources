@@ -1,24 +1,10 @@
-# apiVersion: v1
-# kind: Pod
-# metadata:
-#   name: nginx
-#   # if you want to create the pod in particular namespace:
-#   labels:
-#     namespace: fusion
-# spec:
-#   containers:
-#   # docker run -d --name nginx nginx:stable-perl ----> it will pull nginx:stable-perl base image from docker hub and creates container of name nginx and then start the container
-#   - name: nginx
-#     image: nginx:stable-perl
-
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
   labels:
     app: nginx
-    namespace: fusion
+  namespace: fusion
 spec:
   replicas: 2  # Number of Nginx pods
   selector:
